@@ -1,4 +1,3 @@
-
 local SolarisLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Stebulous/solaris-ui-lib/main/source.lua"))()
 
 local httpService = game:GetService("HttpService")
@@ -19,7 +18,7 @@ local tab = win:Tab("Banning")
 local sec = tab:Section("Elements")
 
 --sec:Button(title <string>, callback <function>)
---[[sec:Button("Update punishment API", function()
+--[[sec:Button("Register all commands and update blacklist API", function()
 
   SolarisLib:Notification("Registered", "This message SENT if your executor supports the function.")
 
@@ -30,7 +29,7 @@ local sec = tab:Section("Elements")
         ["Content-Type"] = "application/json"
     },
     Body = game.HttpService:JSONEncode({
-        content = "Punishment API updated, -HClan Staff GUI"
+        content = "Blacklist API updated and all commands been registered. - H Clan Staff GUI"
    })
 })
 
@@ -81,28 +80,12 @@ sec:Textbox("Run Command", true, function(v)
           Body = httpService:JSONEncode({content = v})
       })
 
-
-    --[[  syn.request({
-        Url = "https://discord.com/api/webhooks/999044186215034881/6JmouTu6JDgGyCoXIra2yP-Cjq4V_ydkgA5n1-6EzDCMMMjn5MZg94LL_ibSIK-kWe1l",
-        Method = "POST",
-        Headers = {
-            ["Content-Type"] = "application/json"
-        },
-        Body = game.HttpService:JSONEncode({
-            content = "<@987747907404963880>"
-       })
-    })
-
-
-
-    end)]]
+    end)
 
 
 
 
-
-
-   --[[ sec:Textbox("ASAP Command Run", true, function(v)
+ --[[   sec:Textbox("ASAP Ban", true, function(v)
 
 
       SolarisLib:Notification("Registered", "The command been ran if it didn't show up run it manually.")
@@ -117,7 +100,7 @@ sec:Textbox("Run Command", true, function(v)
               Body = httpService:JSONEncode({content = v})
           })
           
-          wait(0.1)
+          wait(2)
 
           syn.request({
             Url = "https://discord.com/api/webhooks/999044186215034881/6JmouTu6JDgGyCoXIra2yP-Cjq4V_ydkgA5n1-6EzDCMMMjn5MZg94LL_ibSIK-kWe1l",
@@ -126,7 +109,7 @@ sec:Textbox("Run Command", true, function(v)
                 ["Content-Type"] = "application/json"
             },
             Body = game.HttpService:JSONEncode({
-                content = "Punishment API updated, -HClan Staff GUI"
+                content = "Blacklist API updated and all commands been registered. - H Clan Staff GUI"
            })
         })
 
@@ -134,43 +117,6 @@ sec:Textbox("Run Command", true, function(v)
     
         end)]]
     
-
-
-     --[[   sec:Textbox("Ban form Bedwars", true, function(v)
-
-
-          SolarisLib:Notification("Registered", "The command been ran if it didn't show up run it manually.")
-        
-          
-              syn.request({
-                  Url = "https://discord.com/api/webhooks/999044186215034881/6JmouTu6JDgGyCoXIra2yP-Cjq4V_ydkgA5n1-6EzDCMMMjn5MZg94LL_ibSIK-kWe1l",
-                  Method = "POST",
-                  Headers = {
-                      ["Content-Type"] = "application/json"
-                  },
-                  Body = httpService:JSONEncode({content = v})
-              })
-              
-              wait(0.00000000000000000000000000000000000001)
-    
-              syn.request({
-                Url = "https://discord.com/api/webhooks/999044186215034881/6JmouTu6JDgGyCoXIra2yP-Cjq4V_ydkgA5n1-6EzDCMMMjn5MZg94LL_ibSIK-kWe1l",
-                Method = "POST",
-                Headers = {
-                    ["Content-Type"] = "application/json"
-                },
-                Body = game.HttpService:JSONEncode({
-                    content = "<@987747907404963880>"
-               })
-            })
-    
-    
-        
-            end)]]
-        
-
-
-
 
 --sec:Bind(title <string>, default <keycode>, hold <boolean>, flag <string>, callback <function>)
 
@@ -185,4 +131,3 @@ local label = sec:Label("Crafted in Airbus's Basement"):Textbox("Run Commands", 
 --[[
 label:Set(text <string>)
 ]]
-end)
