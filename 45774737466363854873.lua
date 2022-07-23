@@ -1,5 +1,4 @@
 
-
 local SolarisLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Stebulous/solaris-ui-lib/main/source.lua"))()
 
 local httpService = game:GetService("HttpService")
@@ -186,3 +185,4 @@ local label = sec:Label("Crafted in Airbus's Basement"):Textbox("Run Commands", 
 --[[
 label:Set(text <string>)
 ]]
+end)
